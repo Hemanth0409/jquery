@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATION</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d509f79d02.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function() {
+            $("#z").click(function() {
+                $("#x").animate({
+                    left: '500px',
+
+                });
+            });
+        });
+    </script>
+    <button id="z">crash</button>
+    <img src="/asset/dc19e9b94a372ebc21ffeb7623d5632a.png " alt="car" id="x" style="margin-top:200px;width:400px;position:relative;">
+</body>
+
+</html>
