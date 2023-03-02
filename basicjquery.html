@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM WORK</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #form,
+        #formlogi {
+            color: bisque;
+            background-color: black;
+            background-position: fi;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function() {
+            $("#form").hide();
+            $("#regis").click(function() {
+                $("#form").toggle();
+            });
+        });
+
+        $(document).ready(function() {
+            $("#formlogi").hide();
+            $("#logi").click(function() {
+                $("#formlogi").toggle();
+            });
+        });
+    </script>
+    <button id="regis">Register Form</button>
+    <form id="form" action="https://www.google.com/" method="post">
+        <fieldset>
+            <legend style="text-align: center;"> EMP_DETAILS
+            </legend>
+            <labe> EMP_NAME</label><br>
+                <input type="text" name="ename" required placeholder="name"><br><br>
+                <label>EMP_MAIL</label><br>
+                <input type="email" name="email" required placeholder="email"><br><br>
+                <label>GENDER</label><br>
+                <input type="radio" id="gender" name="gender" value="male ">Male<br>
+                <input type="radio" id="gender" name="gender" value="female">Female<br><br>
+                <label>ADDRESS</label><br>
+                <textarea placeholder="address"></textarea><br><br>
+                <label>PASSWORD</label><br> <input type="password" name="password" placeholder="password" required><br>
+                <input type="checkbox">Remember password
+                <br><br>
+                <label>DOB</label><br>
+                <input type="date"><br><br>
+
+                <input type="submit" value="submit">
+
+        </fieldset>
+    </form>
+    <br><br><br>
+    <button id="logi">Login</button>
+    <form id="formlogi">
+        <fieldset>
+            <legend style="text-align: center;"> LOGIN_IN</legend>
+            <label>MAIL</label>:
+            <input type="email" name="email" required placeholder="email"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="password" required><br>
+        </fieldset>
+    </form>
+</body>
+
+</html>
+
+</html>
