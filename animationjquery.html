@@ -16,14 +16,31 @@
         $(document).ready(function() {
             $("#z").click(function() {
                 $("#x").animate({
-                    left: '500px',
+                    left: '520px'
+                }).delay(500);
+                $("#x").animate({
+                    left: '1020px'
+                })
+            });
+        });
+        $(document).ready(function() {
+            $("#z").click(function() {
+                $("#y").animate({
+                        bottom: '270px',
+                        left: '50px',
+                    })
+                    .fadeOut(900);
 
-                });
             });
         });
     </script>
     <button id="z">crash</button>
-    <img src="/asset/dc19e9b94a372ebc21ffeb7623d5632a.png " alt="car" id="x" style="margin-top:200px;width:400px;position:relative;">
-</body>
+    <div>
+        <img src="/asset/dc19e9b94a372ebc21ffeb7623d5632a.png " id="x" alt="car" style="margin-top:200px;width:400px;position:relative;">
+    </div>
+    <div>
+        <img src="/asset/people-walking-png-photo-21.png" id="y" style="width:150px;margin-top:100px;margin-left:800px;position:absolute;"></body>
+</div>
+
 
 </html>
