@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Webpage with Accordion and Autocomplete</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    .accordion {
+      border: 1px solid #ccc;
+      margin: 20px;
+      padding: 10px;
+    }
+    .accordion h3 {
+      background-color: #eee;
+      border: none;
+      padding: 10px;
+      margin: 0;
+      cursor: pointer;
+    }
+    .accordion .panel {
+      padding: 10px;
+      display: none;
+      background-color: white;
+    }
+    .product-input {
+      width: 300px;
+      padding: 10px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="accordion">
+    <h3>Mobile Phones</h3>
+    <div class="panel">
+      <img src="./asset/images (1).jpg" />
+      <img src="./asset/images.jpg" />
+    </div>
+    <h3>Laptops</h3>
+    <div class="panel">
+      <img src="asset/pngimg.com - laptop_PNG5905.png" width="300px"/>
+      <img src="./asset/images (2).jpg" />
+    </div>
+  </div>
+  <input type="text" id="product-input" class="product-input" placeholder="Search Products" />
+  <script>
+    $(document).ready(function() {
+
+      $(".accordion").accordion();
+
+      var products = [
+        "Mobile Phone",
+        "Laptop",
+        "Tablet",
+        "Smartwatch",
+        "Headphones",
+        "Speaker",
+        "Camera",
+        "Gaming Console",
+        "Smart Home Device"
+      ];
+      $("#product-input").autocomplete({
+        source: products
+      });
+    });
+  </script>
+</body>
+</html>
