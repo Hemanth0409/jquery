@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animate Background Color with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        background-color: rgb(241, 43, 43);
+        color: #fff;
+        padding: 50px;
+        text-align: center;
+        font-size: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        $(document).ready(function () {
+          $("#animateBtn").click(function () {
+            $("body").animate({ backgroundColor: "black" });
+          });
+        });
+      </script>
+    <h1>Animate Background Color with jQuery</h1>
+    <p>Click the button to change the background color</p>
+    <button id="animateBtn">Animate</button>
+   
+  </body>
+</html>
+
