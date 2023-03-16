@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 20,
+                        pattern: /^[a-zA-Z]+$/
+                    },
+                    password: {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 16,
+                        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#])[A-Za-z\d@$#]{8,16}$/
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    mobile: {
+                        required: true,
+                        pattern: /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/
+                    }
+                },
+                messages: {
+                    username: {
+                        required: "Please enter your username",
+                        minlength: "Username must be at least 3 characters long",
+                        maxlength: "Username cannot be more than 20 characters long",
+                        pattern: "Username must contain only alphabets"
+                    },
+                    password: {
+                        required: "Please enter your password",
+                        minlength: "Password must be at least 8 characters long",
+                        maxlength: "Password cannot be more than 16 characters long",
+                        pattern: "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@$#) and must be between 8-16 characters long"
+                    },
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    mobile: {
+                        required: "Please enter your mobile number",
+                        pattern: "Mobile number must be in 3-3-4 format"
+                    }
+                },
+                errorPlacement: function(error, element) {
+                    if (element.attr("name") == "password") {
+                        error.insertAfter($("#password-error-message"));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+    <style>
+        label,
+        button {
+            margin-left: 300px;
+        }
+        
+        input {
+            margin-left: 10px;
+        }
+        
+        body {
+            background: #ee9ca7;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm" action="" method="post">
+        <h1 style="margin-left: 300px;color: rgb(255, 128, 149);margin-top: 100px;">FORM VALIDATION</h1>
+        <div>
+            <label>User name</label>
+            <input type="text" name="username" id="name" placeholder="username"><br><br> </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="password" id="pass" placeholder="password"><br><br>
+        </div>
+        <div>
+            <label>E-mail</label>
+            <input type="mail" name="email" id="mail" placeholder="mail"><br><br>
+        </div>
+        <div>
+            <label>Mobile</label>
+            <input type="tel" name="mobile" id="mnum" placeholder="mobile number"><br><br>
+        </div>
+
+        <button type="submit" value="submit">Submit</button>
+    </form>
+</body>
+
+</html>
