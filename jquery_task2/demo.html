@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JQUERY Task - 2</title>
+    <title>Task - 2</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
@@ -49,7 +49,6 @@
             });
 
             $("#sub").on("click", function() {
-                alert("E-mail verified sucessfully..!");
                 $("#dialog").dialog("close");
 
             });
@@ -80,10 +79,6 @@
             margin-top: -341px;
         }
         
-        #opener {
-            background-color: red;
-        }
-        
         body {
             background: #CAC531;
             /* fallback for old browsers */
@@ -96,10 +91,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light" style="">
+    <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./assests/logo.jfif" alt="" width="150px" height="80px" class="d-inline-block align-text-top">
+                <img src="./assests/logo.jfif" alt="" width="120" height="70" class="d-inline-block align-text-top">
             </a>
             <div id="dialog" title="Basic dialog">
                 <div class="col-12">
@@ -112,7 +107,7 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-primary" id="opener">Subscribe</button>
+            <button type="button" class="btn btn-primary" id="opener" style="background-color: red;">Subscribe</button>
         </div>
 
     </nav>
@@ -122,21 +117,13 @@
     background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     ">
         <li>
-            <div>Menu</div>
-        </li>
-
-        <li>
-            <div>Cricket bats</div>
+            <div>Gym Equipments</div>
         </li>
         <li>
-            <div>Foot ball</div>
-
+            <div>Gym Powder</div>
         </li>
         <li>
             <div>Shoes</div>
-        </li>
-        <li>
-            <div>Gym Equpiment</div>
         </li>
 
 
@@ -147,41 +134,42 @@
     background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     ">
-        <ul style="background: #CAC531;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        ">
-            <li><a href="#Mobiles" style="background-color: rgb(233, 173, 11);">Cricket bats</a></li>
-            <li><a href="#Laptops" style="background-color:rgb(233, 173, 11);">Foot ball</a></li>
-            <li><a href="#Pets" style="background-color: rgb(233, 173, 11);">Shoes</a></li>
+        <ul>
+            <li>
+                <a href="#Protein" style="background-color: rgb(233, 173, 11);">Protein Powder</a>
+            </li>
+            <li>
+                <a href="#Equipments" style="background-color: rgb(233, 173, 11);">Gym Equipments</a>
+            </li>
+            <li><a href="#Shoes" style="background-color: rgb(233, 173, 11);">Shoes</a></li>
         </ul>
-        <div id="Mobiles">
-            <p><strong>Cricket bats</strong></p>
-            <img src="./assests/bat1.png" style="width: 250px;height: 300px;padding: 35px;">
-            <img src="./assests/bat2.jfif" style="width: 250px;height: 300px;padding: 35px;">
-            <img src="./assests/bat3.png" style="width: 250px;height: 300px;padding: 35px;">
+        <div id="Protein">
+            <p><strong>Protein Powder</strong></p>
+            <img src="./assests/gym powder.png" style="width: 250px;height: 300px;">
+            <img src="./assests/gym powder2.png" style="width: 250px;height: 300px;">
+            <img src="./assests/gym powder3.webp" style="width: 250px;height: 300px;">
             <div class="dialog" title="File Download">
                 <div class="progress-label">Starting download...</div>
                 <div class="progressbar"></div>
             </div>
             <button class="downloadButton">Start Download</button>
         </div>
-        <div id="Laptops">
-            <p><strong>Foot ball</strong></p>
-            <img src="./assests/football1.jfif" style="width: 250px;height: 300px;padding: 35px;">
-            <img src="./assests/football2.jfif" style="width: 250px;height: 300px;padding: 35px;">
-            <img src="./assests/football3.jfif" style="width: 250px;height: 300px;padding: 35px;">
+        <div id="Equipments">
+            <p><strong>Gym Equipments</strong></p>
+            <img src="./assests/gymshaker.jfif" style="width: 250px;height: 300px;">
+            <img src="./assests/gym bag.jfif" style="width: 250px;height: 300px;">
+            <img src="./assests/gym towel.jfif" style="width: 300px;height: 300px;">
             <div class="dialog" title="File Download">
                 <div class="progress-label">Starting download...</div>
                 <div class="progressbar"></div>
             </div>
             <button class="downloadButton">Start Download</button>
         </div>
-        <div id="Pets">
+        <div id="Shoes">
             <p><strong>Shoes</strong></p>
-            <img src="./assests/shoes1.jfif" style="width: 250px;height: 300px;padding: 35px;">
-            <img src="./assests/shoes2.jfif" style="width: 250px;height: 300px;padding: 35px;">
-            <img src="./assests/shoes3.jfif" style="width: 250px;height: 300px;padding: 35px;">
+            <img src="./assests/shoes1.jfif" style="width: 250px;height: 300px;">
+            <img src="./assests/shoes2.jfif" style="width: 250px;height: 300px;">
+            <img src="./assests/shoes3.jfif" style="width: 300px;height:300px;">
             <div class="dialog" title="File Download">
                 <div class="progress-label">Starting download...</div>
                 <div class="progressbar"></div>
