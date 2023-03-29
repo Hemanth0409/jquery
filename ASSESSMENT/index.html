@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <title>JQuery-FormValidation</title>
+    <style>
+        .error {
+            color: brown;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="#" method="post" id="MyForm">
+        <fieldset>
+            <legend>FORM VALIDATION</legend>
+
+            <label for="username">User Name</label><br>
+            <input type="text" id="name" name="name" placeholder="User Name"><br><br>
+            <label for="password"> Password</label><br>
+            <input type="password" id="pass" name="pass" placeholder="Password"><br><br>
+            <label for="mail">E-Mail</label><br>
+            <input type="email" id="mail" name="mail" placeholder="Mail Address"><br><br>
+            <label for="mobile num"> Mobile number</label><br>
+            <input type="text" id="num" name="num" placeholder="MobileNumber"><br><br>
+            <input type="submit" id="btn" name="btn">
+        </fieldset>
+    </form>
+    <script>
+        $(document).ready(function() {
+            $("#MyForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 20,
+                        pattern: /^[a-zA-Z]+$/
+                    },
+                    pass: {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 15,
+                        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%^&*])[A-Za-z\d@$#!%^&*]{8,15}$/
+                    },
+                    mail: {
+                        required: true,
+                        pattern: /^[a-zA-Z0-9]+@g2tsolutions.com$/
+                    },
+                    num: {
+                        required: true,
+                        pattern: /^[0-9]{10}$/
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Enter a Valid Name",
+                        minlength: "Minium 5 characters",
+                        maxlength: "Maximum Length 20",
+                        pattern: "Enter only Alpabets"
+                    },
+                    pass: {
+                        required: "Enter a Valid PassWord",
+                        minlength: "Minimum 8 characters",
+                        maxlength: "Maximum length 20 ",
+                        pattern: "Atleast one lowercase letter,One uppercase letter,one numeric digit and one special character."
+                    },
+                    mail: {
+                        required: "Enter a valid mail",
+                        pattern: "The mail should end with @g2tsolutions.com"
+                    },
+                    num: {
+                        required: "Enter a valid number",
+
+                        pattern: "ONLY NUMBER AND LENGTH10"
+                    }
+
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
